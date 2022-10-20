@@ -26,7 +26,7 @@ export const EntryList : FC<Props> = ({status}) => {
 
         const entry = entries.find( e => e._id === id )! ; 
         entry.status = status
-        updateEntry(entry)
+        updateEntry(entry , false )
         endDragging()
     }
     const allowDrop = (event : DragEvent) => { 
